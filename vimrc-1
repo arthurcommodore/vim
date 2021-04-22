@@ -1,0 +1,94 @@
+set nocompatible
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'dracula/vim'
+
+call vundle#end()
+filetype plugin indent on
+
+set nu!
+"command OlaMundo echo "Olá, mundo!"
+noremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>l
+vnoremap <C-s> <Esc>:w<CR>
+"iabbrev http <a href="http://">http://</a>
+"autocmd BufNewFile *.html echo "Esse é um arquivo HTML"
+"let nada = "Isso na verdade é tudo!"
+
+function! GenerateHTML()
+	
+call append(0, '<!DOCTYPE html>')
+call append(1, '<html>')
+call append(2, ' <head>')
+call append(3, '   <meta charset="utf-8">')
+call append(4, '   <title>My test page</title>')
+call append(5, ' </head>')
+call append(6, ' <body>')
+call append(7, '')
+call append(8, ' </body>')
+call append(9, '</html>')
+endfunction
+
+autocmd BufNewFile *.html call GenerateHTML()
+
+function! Testar(var)
+	let var = a:var
+	if( var == 2 )
+		echo "É dois"
+	elseif (var == 4)
+		echo "É quatro"
+	else
+		echo "Não é nem dois e nem quatro"
+	endif
+endfunction
+
+command TestarVar call Testar(var)
+
+
+let c = 0
+for i in [1, 2, 3, 4]
+	let c += 1
+endfor
+
+command ShowC echo c
+
+
+let total = 1
+
+while c <= 4
+	let total += c
+	let c +=1
+endwhile
+
+command ShowTotal echo total
+
+
+function! SetCode()
+	r~/.vim/myfiles/code.txt
+endfunction
+
+command SetCode :call SetCode()
+
+nnoremap <C-b> :SetCode<CR>
+inoremap <C-b> <Esc>:SetCode<CR>i
+vnoremap <C-b> <Esc>:SetCode<CR>
+
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_theme='violet'
+
+let g:neocomplete#enable_at_startup = 1
+syntax on
+color dracula
+
+
+
