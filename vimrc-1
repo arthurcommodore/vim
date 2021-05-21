@@ -19,7 +19,6 @@ inoremap <C-s> <Esc>:w<CR>l
 vnoremap <C-s> <Esc>:w<CR>
 "iabbrev http <a href="http://">http://</a>
 "autocmd BufNewFile *.html echo "Esse é um arquivo HTML"
-"let nada = "Isso na verdade é tudo!"
 
 function! GenerateHTML()
 	
