@@ -37,36 +37,7 @@ endfunction
 
 autocmd BufNewFile *.html call GenerateHTML()
 
-function! Testar(var)
-	let var = a:var
-	if( var == 2 )
-		echo "É dois"
-	elseif (var == 4)
-		echo "É quatro"
-	else
-		echo "Não é nem dois e nem quatro"
-	endif
-endfunction
-
 command TestarVar call Testar(var)
-
-
-let c = 0
-for i in [1, 2, 3, 4]
-	let c += 1
-endfor
-
-command ShowC echo c
-
-
-let total = 1
-
-while c <= 4
-	let total += c
-	let c +=1
-endwhile
-
-command ShowTotal echo total
 
 
 function! SetCode()
