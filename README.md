@@ -8,7 +8,7 @@
 Foi feito auto preenchimento da estrutura príncipal de arquivos como: Java, C e HTML<br>
 Atalho para salvamento de arquivo com Ctrl + s<br>
 Auto indentamento<br>
-auto prenchimento de parênteses, colchetes, aspas simples e duplas<br>
+Auto prenchimento de parênteses, colchetes, aspas simples e duplas<br>
 
 
 ![Screenshot_2021-07-10_02-15-19](https://user-images.githubusercontent.com/72472078/125152699-b6fc6a80-e124-11eb-886c-bc0a9ae9f739.png)
