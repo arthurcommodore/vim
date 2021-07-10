@@ -1,4 +1,4 @@
-# vim
+# Vim
 ## My .vimrc configuration.
 
 ### Configurações básicas que comumente uso no meu dia a dia.
