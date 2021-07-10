@@ -11,8 +11,7 @@ Auto indetamento
 auto prenchimento de parênteses, colchetes, aspas simples e duplas
 
 
+![Screenshot_2021-07-10_02-15-19](https://user-images.githubusercontent.com/72472078/125152699-b6fc6a80-e124-11eb-886c-bc0a9ae9f739.png)
 
-
-![terminal](https://user-images.githubusercontent.com/72472078/125152589-d0e97d80-e123-11eb-9899-b560ae13a8fe.jpeg)
 
 
