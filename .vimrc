@@ -133,8 +133,8 @@ let g:airline_symbols.linenr = ''
 set conceallevel=1
 syntax on
 set termguicolors
-"colorscheme nord
-colorscheme dracula
+colorscheme nord
+"colorscheme dracula
 
 function! InsertUm()
 endfunction
