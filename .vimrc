@@ -1,3 +1,8 @@
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+
+set background=dark
 set autoindent
 set tabstop=4
 set ts=4
@@ -15,7 +20,8 @@ set showcmd
 set encoding=utf-8
 set ruler
 
-autocmd vimenter * NERDTree
+
+"autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd vimenter * wincmd p
 
@@ -26,16 +32,16 @@ let NERDTreeQuitOnOpen = 1
 
 map <C-n> :NERDTreeToggle<CR>
 
-noremap <C-s> :w<CR>
-inoremap <C-s> <ESC>:w<CR>i
-vnoremap <C-s> <Esc>:w<CR>v
+map <C-s> :w<CR>
+imap <C-s> <ESC>:w<CR>i
+nmap <C-s> <Esc>:w<CR>v
 
-inoremap { {} 
-inoremap [ []
-inoremap ( ()
-inoremap ' ''
-inoremap " ""
-inoremap ` ``
+"inoremap { {} 
+"inoremap [ []
+"inoremap ( ()
+"inoremap ' ''
+"inoremap " ""
+"inoremap ` ``
 
 call plug#begin('~/.vim/plugged')
 
@@ -78,6 +84,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'dracula/vim'
+
+Plug 'benmills/vimux'
+
+Plug 'mhartington/oceanic-next'
+
+Plug 'cocopon/iceberg.vim'
+
+Plug 'townk/vim-autoclose'
 
 call plug#end()
 
@@ -132,9 +146,11 @@ let g:airline_symbols.linenr = ''
 
 set conceallevel=1
 syntax on
-set termguicolors
-colorscheme nord
+"set termguicolors
+"colorscheme nord
 "colorscheme dracula
+"colorscheme OceanicNext
+colorscheme iceberg
 
 function! InsertUm()
 endfunction
